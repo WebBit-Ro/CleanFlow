@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f5ef">
+  <meta name="description" content="Home cleaning with clear pricing. Choose your rooms and extra services to get an instant estimate from CleanFlow.">
+  <title>CleanFlow — Home cleaning</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="#home" aria-label="CleanFlow home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>CleanFlow</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#home" data-i18n="navHome">Home</a>
+        <a href="#services" data-i18n="navServices">Services</a>
+        <a href="#how" data-i18n="navHow">How it works</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="language-switch" role="group" aria-label="Choose language">
+          <button type="button" data-language="en" aria-pressed="true">EN</button>
+          <button type="button" data-language="ru" aria-pressed="false">RU</button>
+          <button type="button" data-language="uk" aria-pressed="false">UK</button>
+        </div>
+        <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <nav class="mobile-nav container" aria-label="Mobile navigation">
+        <a href="#home" data-i18n="navHome">Home</a>
+        <a href="#services" data-i18n="navServices">Services</a>
+        <a href="#how" data-i18n="navHow">How it works</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+        <div class="mobile-language-switch" role="group" aria-label="Choose language">
+          <button type="button" data-language="en" aria-pressed="true">EN</button>
+          <button type="button" data-language="ru" aria-pressed="false">RU</button>
+          <button type="button" data-language="uk" aria-pressed="false">UK</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="heroEyebrow">Thoughtful care for your home</p>
+        <h1><span data-i18n="heroTitle">Home cleaning,</span><span class="hero-accent" data-i18n="heroAccent">made simple.</span></h1>
+        <p class="hero-description" data-i18n="heroText">A reliable, detail-minded cleaning service that gives you back time for the things that matter.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#calculator"><span data-i18n="bookNow">Book now</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+          <a class="text-link" href="#services" data-i18n="viewServices">View services</a>
+        </div>
+        <div class="hero-note">
+          <span class="note-dot" aria-hidden="true"></span>
+          <span data-i18n="heroNote">See an estimate before sending a request.</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img class="hero-photo" src="https://images.unsplash.com/photo-1631510390389-c1e4fb20ff31?auto=format&fit=crop&w=1600&q=85" alt="Bright living room with a light sofa and large window" data-i18n-alt="photoAlt" fetchpriority="high">
+        <div class="calculator-card" id="calculator">
+          <div class="calculator-heading">
+            <div>
+              <p class="eyebrow" data-i18n="quoteEyebrow">Instant estimate</p>
+              <h2 data-i18n="quoteTitle">What should we clean?</h2>
+            </div>
+            <span class="currency-mark" aria-hidden="true">€</span>
+          </div>
+
+          <div class="room-control">
+            <div class="control-heading">
+              <label for="room-count" data-i18n="roomsLabel">Number of rooms</label>
+              <output id="room-count-output" for="room-count"><strong>3</strong> <span data-room-unit>rooms</span></output>
+            </div>
+            <input class="range-input" id="room-count" type="range" min="1" max="8" step="1" value="3">
+            <div class="range-labels"><span>1</span><span>8</span></div>
+          </div>
+
+          <fieldset class="extras-fieldset">
+            <legend data-i18n="extrasTitle">Add a little extra</legend>
+            <div class="extras-grid">
+              <label class="extra-option">
+                <input type="checkbox" value="deep" data-extra>
+                <span class="custom-checkbox" aria-hidden="true"></span>
+                <span class="extra-name" data-i18n="extraDeep">Deep cleaning</span>
+                <span class="extra-price">+€45</span>
+              </label>
+              <label class="extra-option">
+                <input type="checkbox" value="fridge" data-extra>
+                <span class="custom-checkbox" aria-hidden="true"></span>
+                <span class="extra-name" data-i18n="extraFridge">Refrigerator</span>
+                <span class="extra-price">+€18</span>
+              </label>
+              <label class="extra-option">
+                <input type="checkbox" value="oven" data-extra>
+                <span class="custom-checkbox" aria-hidden="true"></span>
+                <span class="extra-name" data-i18n="extraOven">Oven</span>
+                <span class="extra-price">+€20</span>
+              </label>
+              <label class="extra-option">
+                <input type="checkbox" value="windows" data-extra>
+                <span class="custom-checkbox" aria-hidden="true"></span>
+                <span class="extra-name" data-i18n="extraWindows">Window cleaning</span>
+                <span class="extra-price">+€30</span>
+              </label>
+              <label class="extra-option">
+                <input type="checkbox" value="laundry" data-extra>
+                <span class="custom-checkbox" aria-hidden="true"></span>
+                <span class="extra-name" data-i18n="extraLaundry">Laundry</span>
+                <span class="extra-price">+€15</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="estimate-total" aria-live="polite">
+            <div>
+              <p data-i18n="estimatedTotal">Estimated total</p>
+              <output id="total-price">€85</output>
+            </div>
+            <span data-i18n="estimateNote">Indicative estimate</span>
+          </div>
+
+          <button class="button button-primary calculator-submit" id="open-booking" type="button"><span data-i18n="continueBooking">Continue to booking</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></button>
+          <p class="calculator-disclaimer" data-i18n="calculatorDisclaimer">Final details can be confirmed after we receive your request.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-facts" aria-label="Service information">
+      <div class="container quick-facts-inner">
+        <div><span class="fact-check" aria-hidden="true">✓</span><span data-i18n="factOne">Price updates as you choose</span></div>
+        <div><span class="fact-check" aria-hidden="true">✓</span><span data-i18n="factTwo">Optional extra services</span></div>
+        <div><span class="fact-check" aria-hidden="true">✓</span><span data-i18n="factThree">No payment on this page</span></div>
+      </div>
+    </section>
+
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-intro">
+          <div>
+            <p class="eyebrow" data-i18n="servicesEyebrow">Our services</p>
+            <h2 class="section-title" data-i18n="servicesTitle">The right clean for every home.</h2>
+          </div>
+          <p class="section-intro-copy" data-i18n="servicesText">From a regular reset to a more detailed clean, choose the care your space needs.</p>
+        </div>
+
+        <div class="service-list">
+          <article class="service-row">
+            <span class="service-number">01</span>
+            <h3 data-i18n="serviceRegularTitle">Regular cleaning</h3>
+            <p data-i18n="serviceRegularText">A practical clean for kitchens, bathrooms and everyday living areas.</p>
+            <span class="service-price" data-i18n="serviceRegularPrice">From €49</span>
+          </article>
+          <article class="service-row">
+            <span class="service-number">02</span>
+            <h3 data-i18n="serviceDeepTitle">Deep cleaning</h3>
+            <p data-i18n="serviceDeepText">Extra attention for built-up dirt, detailed surfaces and harder-to-reach areas.</p>
+            <span class="service-price" data-i18n="serviceDeepPrice">From €94</span>
+          </article>
+          <article class="service-row">
+            <span class="service-number">03</span>
+            <h3 data-i18n="serviceMovingTitle">Move-in / move-out</h3>
+            <p data-i18n="serviceMovingText">A detailed clean for an empty home before moving in or after moving out.</p>
+            <span class="service-price" data-i18n="serviceMovingPrice">Custom estimate</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how-section" id="how">
+      <div class="container">
+        <p class="eyebrow" data-i18n="howEyebrow">How it works</p>
+        <h2 class="section-title how-title" data-i18n="howTitle">A cleaner home in three easy steps.</h2>
+        <div class="steps-grid">
+          <article class="step-card"><span>01</span><h3 data-i18n="stepOneTitle">Tell us about your home</h3><p data-i18n="stepOneText">Choose the number of rooms and any additional services. Your estimate updates instantly.</p></article>
+          <article class="step-card"><span>02</span><h3 data-i18n="stepTwoTitle">Choose a convenient time</h3><p data-i18n="stepTwoText">Leave your preferred date and time in the booking form.</p></article>
+          <article class="step-card"><span>03</span><h3 data-i18n="stepThreeTitle">Send your request</h3><p data-i18n="stepThreeText">Review the details and submit your request for confirmation.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="clarity-section">
+      <div class="container clarity-grid">
+        <div>
+          <p class="eyebrow" data-i18n="clarityEyebrow">Clear estimate</p>
+          <h2 data-i18n="clarityTitle">Know what goes into your price.</h2>
+        </div>
+        <div>
+          <p class="clarity-copy" data-i18n="clarityText">The estimate is based on the number of rooms and the extra services you select. You can review the full breakdown before sending a request.</p>
+          <ul class="clarity-list">
+            <li><span aria-hidden="true">✓</span><span data-i18n="clarityPointOne">Room-based calculation</span></li>
+            <li><span aria-hidden="true">✓</span><span data-i18n="clarityPointTwo">Optional services shown separately</span></li>
+            <li><span aria-hidden="true">✓</span><span data-i18n="clarityPointThree">Estimate shown before booking</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container faq-grid">
+        <div>
+          <p class="eyebrow" data-i18n="faqEyebrow">Good to know</p>
+          <h2 class="section-title" data-i18n="faqTitle">Frequently asked questions.</h2>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3><button type="button" class="faq-question" aria-expanded="true"><span data-i18n="faqQuestionOne">How is the price calculated?</span><span class="faq-symbol" aria-hidden="true"></span></button></h3>
+            <div class="faq-answer"><p data-i18n="faqAnswerOne">The estimate starts with €49 for the first room. Each additional room adds €18. Optional services are added to the total separately.</p></div>
+          </article>
+          <article class="faq-item">
+            <h3><button type="button" class="faq-question" aria-expanded="false"><span data-i18n="faqQuestionTwo">What is included in regular cleaning?</span><span class="faq-symbol" aria-hidden="true"></span></button></h3>
+            <div class="faq-answer" hidden><p data-i18n="faqAnswerTwo">Regular cleaning is intended for everyday home areas such as the kitchen, bathroom and living spaces. Exact tasks can be discussed when confirming the request.</p></div>
+          </article>
+          <article class="faq-item">
+            <h3><button type="button" class="faq-question" aria-expanded="false"><span data-i18n="faqQuestionThree">Can I add extra services?</span><span class="faq-symbol" aria-hidden="true"></span></button></h3>
+            <div class="faq-answer" hidden><p data-i18n="faqAnswerThree">Yes. Select any combination of deep cleaning, refrigerator, oven, window cleaning and laundry in the calculator.</p></div>
+          </article>
+          <article class="faq-item">
+            <h3><button type="button" class="faq-question" aria-expanded="false"><span data-i18n="faqQuestionFour">Does submitting the form confirm my appointment?</span><span class="faq-symbol" aria-hidden="true"></span></button></h3>
+            <div class="faq-answer" hidden><p data-i18n="faqAnswerFour">No. The form currently works as a frontend demonstration and does not send a real booking. A contact or booking service needs to be connected before launch.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-main">
+      <div class="footer-brand-block">
+        <a class="brand" href="#home" aria-label="CleanFlow home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>CleanFlow</span></a>
+        <p data-i18n="footerText">Simple home cleaning with clear options and pricing.</p>
+      </div>
+      <div class="footer-column">
+        <h2 data-i18n="footerExplore">Explore</h2>
+        <a href="#home" data-i18n="navHome">Home</a>
+        <a href="#services" data-i18n="navServices">Services</a>
+        <a href="#how" data-i18n="navHow">How it works</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
+      </div>
+      <div class="footer-column">
+        <h2 data-i18n="footerContact">Contact</h2>
+        <p data-i18n="contactPlaceholder">Add your business contact details here.</p>
+        <a href="#calculator" data-i18n="bookNow">Book now</a>
+      </div>
+    </div>
+    <div class="container footer-bottom"><span data-i18n="copyright">© 2026 CleanFlow. All rights reserved.</span><a href="#home" data-i18n="backTop">Back to top ↑</a></div>
+  </footer>
+
+  <dialog class="booking-dialog" id="booking-dialog" aria-labelledby="booking-title">
+    <div class="dialog-content">
+      <div class="dialog-heading">
+        <div><p class="eyebrow" data-i18n="modalEyebrow">Booking request</p><h2 id="booking-title" data-i18n="modalTitle">Your cleaning details</h2></div>
+        <button type="button" class="dialog-close" id="close-booking" aria-label="Close dialog">×</button>
+      </div>
+
+      <div id="booking-form-view">
+        <div class="booking-summary">
+          <div><span data-i18n="summaryRooms">Rooms</span><strong id="summary-rooms">3</strong></div>
+          <div><span data-i18n="summaryExtras">Additional services</span><strong id="summary-extras">None</strong></div>
+          <div class="summary-total"><span data-i18n="summaryTotal">Estimated total</span><strong id="summary-total">€85</strong></div>
+        </div>
+
+        <form id="booking-form" novalidate>
+          <div class="form-grid">
+            <label class="form-field"><span data-i18n="nameLabel">Your name</span><input name="name" autocomplete="name" required minlength="2" data-i18n-placeholder="namePlaceholder" placeholder="Full name"></label>
+            <label class="form-field"><span data-i18n="phoneLabel">Phone number</span><input name="phone" type="tel" autocomplete="tel" required pattern="[+0-9()\-\s]{7,}" data-i18n-placeholder="phonePlaceholder" placeholder="+00 000 000 000"></label>
+            <label class="form-field"><span data-i18n="emailLabel">Email address</span><input name="email" type="email" autocomplete="email" required data-i18n-placeholder="emailPlaceholder" placeholder="name@example.com"></label>
+            <label class="form-field"><span data-i18n="dateLabel">Preferred date</span><input name="date" id="booking-date" type="date" required></label>
+            <label class="form-field"><span data-i18n="timeLabel">Preferred time</span><select name="time" required><option value="" data-i18n="timePlaceholder">Select a time</option><option value="morning" data-i18n="timeMorning">Morning</option><option value="afternoon" data-i18n="timeAfternoon">Afternoon</option><option value="evening" data-i18n="timeEvening">Evening</option></select></label>
+            <label class="form-field form-field-wide"><span data-i18n="messageLabel">Additional details (optional)</span><textarea name="message" rows="3" data-i18n-placeholder="messagePlaceholder" placeholder="Anything we should know?"></textarea></label>
+          </div>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <p class="form-note" data-i18n="formDemoNote">Demo form: your details stay in this browser and are not sent to a company.</p>
+          <button class="button button-primary form-submit" type="submit"><span data-i18n="submitRequest">Submit request</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></button>
+        </form>
+      </div>
+
+      <div class="booking-success" id="booking-success" hidden>
+        <span class="success-mark" aria-hidden="true">✓</span>
+        <h3 data-i18n="successTitle">Request details are ready</h3>
+        <p data-i18n="successText">This is a frontend demo. No booking has been sent. Connect a booking service to receive real requests.</p>
+        <button type="button" class="button button-primary" id="finish-booking" data-i18n="closeButton">Close</button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
